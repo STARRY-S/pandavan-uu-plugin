@@ -366,11 +366,7 @@ config_pandavan_bootup_implemention() {
 
     {
         echo "#!/bin/sh";
-        echo "";
-        echo "START=99";
-        echo "start() {"
-        echo "    /bin/sh ${MONITOR_FILE} &";
-        echo "}"
+        echo "nohup /bin/sh ${MONITOR_FILE} &";
     } > "${init_script}"
 
     [ "$?" != "0" ] && return 1
