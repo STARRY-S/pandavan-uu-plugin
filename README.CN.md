@@ -1,25 +1,23 @@
 # UU Plugin for Pandavan
 
-> [简体中文](README.CN.md)
+适用于毛子 Pandavan 的 [网易 UU 加速器](https://uu.163.com/) 路由器插件安装脚本。
 
-[Netease UU Game booster](https://uu.163.com/) router plugin install script for Pandavan.
+此项目的脚本基于网易 UU 官方 [install.sh](https://uu.gdl.netease.com/uuplugin-script/20231117102400/install.sh) 脚本（日期 `20231117`），增添了 Pandavan 系统支持。
 
-This project adds pandavan system support based on the Netease UU official install script [install.sh](https://uu.gdl.netease.com/uuplugin-script/20231117102400/install.sh) (date `20231117`).
+有关此脚本的更多信息请访问网易 UU 路由器插件[官方文档](https://router.uu.163.com/app/html/online/baike_share.html?baike_id=5f963c9304c215e129ca40e8)。
 
-For more info about this script, please refer to UU plugin [official documents](https://router.uu.163.com/app/html/online/baike_share.html?baike_id=5f963c9304c215e129ca40e8).
+## 使用方法
 
-## Usage
+1. 拷贝本项目 [install.sh](install.sh) 安装脚本到路由器中。
+1. 执行 `install.sh`，将在 `/etc/storage/uu` 目录下安装加速器插件，并自动配置路由器开机自启动。
 
-1. Copy [install.sh](install.sh) script into pandava router.
-1. Run `install.sh` to install UU plugin in `/etc/storage/uu` directory, and it will auto-start when the system starts.
+    安装脚本日志可在 `/tmp/install.log` 获取。
 
-    The install log output file is `/tmp/install.log`.
+## 说明
 
-## Note
+此项目的脚本仅在 *小米路由器 R3G*，Pandavan 系统版本 `3.4.3.9-099_24-06-1` 上进行测试。
 
-This install script is only tested on router *Xiaomi R3G* with pandavan system version `3.4.3.9-099_24-06-1`.
-
-**Use at your own risk!**
+**使用风险请自负！**
 
 ## LICENSE
 
