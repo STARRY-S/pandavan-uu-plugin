@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "Log output to /tmp/install.log"
 touch /tmp/install.log
 chmod a+rw /tmp/install.log
 exec 2>/tmp/install.log || true
@@ -471,8 +472,10 @@ install() {
     [ "$?" != "0" ] && return 4
 
     download "${MONITOR_DOWNLOAD_URL}" "${MONITOR_FILE}"
-    # Update monitoring file install directory
-    sed -i 's/\/usr\/sbin/\/etc\/storage\/uu/g' ${MONITOR_FILE}
+    if [ "${ROUTER}" = "${PANDAVAN}" ];then
+        # Update monitoring file install directory of pandavan
+        sed -i 's/\/usr\/sbin/\/etc\/storage\/uu/g' ${MONITOR_FILE}
+    fi
     if [ "$?" != "0" ];then
         [ -f "${MONITOR_FILE}" ] && rm "${MONITOR_FILE}"
         return 5
